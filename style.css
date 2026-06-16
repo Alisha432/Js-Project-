@@ -1,0 +1,80 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Arial, sans-serif;
+    background: #f4f4f4;
+    text-align: center;
+    padding: 30px;
+}
+
+h1{
+    margin-bottom: 20px;
+}
+
+.noteContainer{
+    margin-bottom: 20px;
+}
+
+input{
+    width: 250px;
+    padding: 10px;
+}
+
+#notes{
+    padding: 10px 15px;
+    cursor: pointer;
+}
+
+
+.Container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.note{
+    width: 250px;
+    min-height: 150px;
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.note p{
+    word-wrap: break-word;
+    margin-bottom: 15px;
+}
+
+.buttons{
+    display: flex;
+    justify-content: space-between;
+   
+}
+
+.edit{
+    background: green;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+    border-radius: 5px;
+   
+}
+
+.delete{
+    background: red;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+    border-radius: 5px;
+}
