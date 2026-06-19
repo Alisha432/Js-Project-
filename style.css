@@ -4,24 +4,40 @@
     box-sizing: border-box;
 }
 
+
 body{
-    font-family: Arial, sans-serif;
-    background: #f4f4f4;
+   background-color:  #0D0D0D;
+   
+ font-family: Arial, sans-serif;
     text-align: center;
     padding: 30px;
 }
 
 h1{
     margin-bottom: 20px;
+   column-rule: #d4af37;
+
 }
 
-.noteContainer{
-    margin-bottom: 20px;
-}
 
 input{
     width: 250px;
+    border: none;
     padding: 10px;
+    outline: none;
+/* box-shadow: 0 0 50px rgba(124, 58, 237, 3); */
+box-shadow: 0 0 50px #db4eee;
+    transition: 0.3s;
+}
+#btn{
+  
+    width: 100px;
+    height: 30px;
+    background-color: blue;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-size: 16px;
 }
 
 #notes{
@@ -30,51 +46,50 @@ input{
 }
 
 
-.Container{
+input:hover{
+    box-shadow: 0 0 50px rgba(212,175,55,0.5);
+}
+
+.card{
+    border: 1px solid black;
+    padding: 40px;
+    background-color: aqua;
+    width: 30%;
+    border-radius: 10px;
+   
+}
+
+
+.mainContainer{
+    width: 100%;
+        margin-top: 30px;
+    /* background-color: #9d13af; */
     display: flex;
     flex-wrap: wrap;
-    gap: 15px;
+justify-content: center;
+gap: 20px;
+height: 50vh;
 }
 
-.note{
-    width: 250px;
-    min-height: 150px;
-    background: white;
-    padding: 15px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.2);
-
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-.note p{
-    word-wrap: break-word;
-    margin-bottom: 15px;
-}
-
-.buttons{
-    display: flex;
-    justify-content: space-between;
-   
-}
-
-.edit{
-    background: green;
-    color: white;
+#edit{
+    width: 80px;
+    height: 35px;
+    font-size: 14px;
     border: none;
-    padding: 8px 12px;
+    border-radius: 8px;
     cursor: pointer;
-    border-radius: 5px;
-   
+    margin: 5px;
+      
 }
-
-.delete{
-    background: red;
-    color: white;
+  #del{
+    width: 80px;
+    height: 35px;
+    font-size: 14px;
     border: none;
-    padding: 8px 12px;
+    border-radius: 8px;
     cursor: pointer;
-    border-radius: 5px;
+    margin: 5px;
+      
 }
+  
+  

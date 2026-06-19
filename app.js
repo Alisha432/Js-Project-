@@ -1,49 +1,35 @@
 
-let addBtn = document.querySelector("#notes");
-let noteInput = document.querySelector("#note");
-let container = document.querySelector(".Container");
+let btn = document.querySelector("#btn");
+let note = document.querySelector("#note")
+let noteContainer = document.querySelector(".noteContainer")
 
-addBtn.addEventListener("click", () => {
+btn.addEventListener ("click",()=>{
+    console.log("run")
+ 
+    let main = document.querySelector(".mainContainer")
+main.innerHTML += `<div class= card>
+<h1>${note.value}</h1>
+<div>
+    <button id="edit" onClick =edit(event)>Edit</button>
+    <button id="del" onClick =del(event)>Delete</button>
+</div>
+</div>`
 
-    let noteText = noteInput.value;
+})
 
-    if(noteText === ""){
-        alert("Please enter a note");
-        return;
-    }
+// Edit section
 
-    container.innerHTML += `
-        <div class="note">
-            <p>${noteText}</p>
+const edit = (event)=>{
+   let newNotes = prompt("Edit your notes",note.value)
+   event.target.parentNode.parentNode.firstChild.nextSibling.innerHTML = newNotes
+   note.value =""
+}
 
-            <div class="buttons">
-                <button class="edit">Edit</button>
-                <button class="delete">Delete</button>
-            </div>
-        </div>
-    `;
 
-    noteInput.value = "";
-});
+const del = (event)=>{
+     event.target.parentNode.parentNode.remove()
+}
 
-container.addEventListener("click", (e) => {
 
-    if(e.target.classList.contains("delete")){
-        e.target.closest(".note").remove();
-    }
+    
 
-    if(e.target.classList.contains("edit")){
-
-        let noteCard = e.target.closest(".note");
-        let noteText = noteCard.querySelector("p");
-
-        let updatedText = prompt(
-            "Edit your note",
-            noteText.innerText
-        );
-
-        if(updatedText !== null && updatedText !== ""){
-            noteText.innerText = updatedText;
-        }
-    }
-});
