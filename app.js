@@ -8,8 +8,8 @@ btn.addEventListener ("click",()=>{
  
     let main = document.querySelector(".mainContainer")
 main.innerHTML += `<div class= card>
-<h1>${note.value}</h1>
-<div>
+<h1 class=head>${note.value}</h1>
+<div class=btnsDiv>
     <button id="edit" onClick =edit(event)>Edit</button>
     <button id="del" onClick =del(event)>Delete</button>
 </div>
